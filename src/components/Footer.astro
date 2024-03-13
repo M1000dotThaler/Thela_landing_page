@@ -1,0 +1,59 @@
+---
+import GithubIcon from "../components/icons/Github__icon.astro";
+---
+
+<footer>
+  <header>
+    <h2>Thela <span>Network</span></h2>
+  </header>
+  <div class="social__container">
+    <a href="#">Enlace</a>
+    <a href="#">Enlace</a>
+    <a href="#">Enlace</a>
+  </div>
+  <p>Copyright 2024</p>
+  <div class="footer__right">
+    <a href="#">
+      <GithubIcon />
+      <GithubIcon />
+      <GithubIcon />
+    </a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem;
+    margin-top: 5rem;
+    border-top: 1px solid rgb(36, 36, 36);
+  }
+
+  .social__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  @media (min-width: 768px) {
+    footer {
+      height: 10rem;
+      flex-direction: row;
+    }
+
+    footer h2 {
+      margin-right: 2.5rem;
+    }
+    .social__container {
+      flex-direction: row;
+    }
+    .footer__right {
+      margin-left: auto
+    }
+  }
+</style>

@@ -1,0 +1,36 @@
+---
+//JavaScript
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href}>
+  <slot name="icon-before" />
+  <slot />
+  <slot name="icon-after" />
+</a>
+
+<style>
+  a {
+    width: 14rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+    align-items: center;
+    padding: 0rem 1rem 0 1rem;
+    justify-content: center;
+    background-color: rgb(88, 88, 88);
+    font-weight: bold;
+    transition: .4s;
+    box-shadow: 0 1px 5px -1px #ffffff4f
+  }
+
+
+  a:hover {
+    box-shadow: 0 5px 15px -3px #ffffff4f;
+  }
+</style>
