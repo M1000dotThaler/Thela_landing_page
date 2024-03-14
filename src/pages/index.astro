@@ -2,11 +2,37 @@
 import Button from "../components/Button.astro";
 import GithubIcon from "../components/icons/Github__icon.astro"
 import Layout from "../layouts/Layout.astro";
+
 ---
 
 <Layout title="Thela Network">
   <header>
-    <h1>Thela <span>Network</span></h1>
+    <h1>Thela is <span>Network</span></h1>
+
+	<script>
+		//list of txt
+		const textos = ['A NETWORK', 'A LAYER 1', 'A COMMUNITY'];
+		let index = 0;
+		
+		
+		function changetext() {
+		  const elemento = document.querySelector('h1 span');
+		  if (elemento instanceof HTMLElement) { 
+			elemento.innerText = textos[index];
+			index = (index + 1) % textos.length;
+			setTimeout(changetext, 3500);
+		  }
+		}
+		
+		
+		changetext();
+	  </script>
+	  
+	  
+	  
+
+	
+	
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quod saepe
       eum neque velit laudantium. Sequi reprehenderit inventore pariatur iusto,
