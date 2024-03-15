@@ -1,38 +1,30 @@
 ---
 import Button from "../components/Button.astro";
-import GithubIcon from "../components/icons/Github__icon.astro"
+import GithubIcon from "../components/icons/Github__icon.astro";
 import Layout from "../layouts/Layout.astro";
-
+import Roadmap from "../components/Roadmap.astro";
 ---
 
 <Layout title="Thela Network">
   <header>
     <h1>Thela is <span>Network</span></h1>
 
-	<script>
-		//list of txt
-		const textos = ['A NETWORK', 'A LAYER 1', 'A COMMUNITY'];
-		let index = 0;
-		
-		
-		function changetext() {
-		  const elemento = document.querySelector('h1 span');
-		  if (elemento instanceof HTMLElement) { 
-			elemento.innerText = textos[index];
-			index = (index + 1) % textos.length;
-			setTimeout(changetext, 3500);
-		  }
-		}
-		
-		
-		changetext();
-	  </script>
-	  
-	  
-	  
+    <script>
+      //list of txt
+      const textos = ["A NETWORK", "A LAYER 1", "A COMMUNITY"];
+      let index = 0;
 
-	
-	
+      function changetext() {
+        const elemento = document.querySelector("h1 span");
+        if (elemento instanceof HTMLElement) {
+          elemento.innerText = textos[index];
+          index = (index + 1) % textos.length;
+          setTimeout(changetext, 3500);
+        }
+      }
+
+      changetext();
+    </script>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quod saepe
       eum neque velit laudantium. Sequi reprehenderit inventore pariatur iusto,
@@ -42,19 +34,17 @@ import Layout from "../layouts/Layout.astro";
     </p>
     <div class="buttons__container">
       <Button href="/">
-        <GithubIcon slot="icon-before"></GithubIcon>
+        <GithubIcon slot="icon-before" />
         GitHub
       </Button>
       <Button href="/">
-        <GithubIcon slot="icon-after"></GithubIcon>
+        <GithubIcon slot="icon-after" />
         GitHub
       </Button>
     </div>
   </header>
   <main>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quod obcaecati totam vero aperiam, explicabo est itaque eos in atque natus veritatis odit similique neque ipsam maiores rem accusamus aspernatur assumenda illum adipisci iusto laudantium ipsa. Ipsum dolores quos mollitia explicabo minima corporis ab, reprehenderit quibusdam quasi architecto? Praesentium consectetur, nulla nemo delectus aspernatur veritatis blanditiis velit quis. Animi voluptas id sunt ea dignissimos cupiditate exercitationem eius soluta similique? Veniam dignissimos placeat laudantium reprehenderit quidem accusamus? Dignissimos possimus nostrum excepturi. Eaque labore, iste, nam et quisquam iure nisi soluta similique reiciendis laudantium culpa molestias cumque excepturi consequatur sit quis impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quod obcaecati totam vero aperiam, explicabo est itaque eos in atque natus veritatis odit similique neque ipsam maiores rem accusamus aspernatur assumenda illum adipisci iusto laudantium ipsa. Ipsum dolores quos mollitia explicabo minima corporis ab, reprehenderit quibusdam quasi architecto? Praesentium consectetur, nulla nemo delectus aspernatur veritatis blanditiis velit quis. Animi voluptas id sunt ea dignissimos cupiditate exercitationem eius soluta similique? Veniam dignissimos placeat laudantium reprehenderit quidem accusamus? Dignissimos possimus nostrum excepturi. Eaque labore, iste, nam et quisquam iure nisi soluta similique reiciendis laudantium culpa molestias cumque excepturi consequatur sit quis impedit?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quod obcaecati totam vero aperiam, explicabo est itaque eos in atque natus veritatis odit similique neque ipsam maiores rem accusamus aspernatur assumenda illum adipisci iusto laudantium ipsa. Ipsum dolores quos mollitia explicabo minima corporis ab, reprehenderit quibusdam quasi architecto? Praesentium consectetur, nulla nemo delectus aspernatur veritatis blanditiis velit quis. Animi voluptas id sunt ea dignissimos cupiditate exercitationem eius soluta similique? Veniam dignissimos placeat laudantium reprehenderit quidem accusamus? Dignissimos possimus nostrum excepturi. Eaque labore, iste, nam et quisquam iure nisi soluta similique reiciendis laudantium culpa molestias cumque excepturi consequatur sit quis impedit?</p>
+    <Roadmap></Roadmap>
   </main>
 </Layout>
 
@@ -67,7 +57,7 @@ import Layout from "../layouts/Layout.astro";
     gap: 1rem;
   }
 
-  header p{
+  header p {
     font-size: 1.8rem;
   }
   .buttons__container {
@@ -77,10 +67,11 @@ import Layout from "../layouts/Layout.astro";
     gap: 5rem;
   }
 
-  main{
+  main {
     margin-bottom: auto;
     text-align: center;
     padding: 1rem;
+    overflow-x: hidden;
   }
 
   @media (min-width: 765px) {
