@@ -9,22 +9,26 @@ import Roadmap from "../components/Roadmap.astro";
   <header>
     <h1>Thela is <span>Network</span></h1>
 
-    <script>
-      //list of txt
-      const textos = ["A NETWORK", "A LAYER 1", "A COMMUNITY"];
-      let index = 0;
-
-      function changetext() {
-        const elemento = document.querySelector("h1 span");
-        if (elemento instanceof HTMLElement) {
-          elemento.innerText = textos[index];
-          index = (index + 1) % textos.length;
-          setTimeout(changetext, 3500);
-        }
-      }
-
-      changetext();
-    </script>
+	<script>
+		//list of txt
+		const textos = ['A NETWORK', 'A LAYER 1', 'A COMMUNITY'];
+		let index = 0;
+		
+		
+		function changetext() {
+		  const element = document.querySelector('h1 span');
+		  if (element instanceof HTMLElement) { 
+			element.innerText = textos[index];
+			index = (index + 1) % textos.length;
+			setTimeout(changetext, 3500);
+		  }
+		}
+		
+		
+		changetext();
+	  </script>
+	  
+	  
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quod saepe
       eum neque velit laudantium. Sequi reprehenderit inventore pariatur iusto,
@@ -42,10 +46,30 @@ import Roadmap from "../components/Roadmap.astro";
         GitHub
       </Button>
     </div>
+
+    <div>
+
+
+
+
+
+
+    </div>
+    <div class="logo-container">
+      <img src="../public/scroll.png" alt="Logo" class="logo">
+    </div>
+  
   </header>
+
+  
   <main>
     <Roadmap></Roadmap>
   </main>
+
+  <div class="logo-container">
+    <img src="../public/scroll.png" alt="Logo" class="logo">
+  </div>
+
 </Layout>
 
 <style>
@@ -60,6 +84,33 @@ import Roadmap from "../components/Roadmap.astro";
   header p {
     font-size: 1.8rem;
   }
+
+  .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+  .logo {
+     padding-top: 30px;
+      width: 40px; 
+      height: auto; 
+      margin-left: 1px;
+      animation: moveUpDown 3s ease-in-out infinite;
+      filter: blur(0.5px);
+    }
+    @keyframes moveUpDown {
+      0% {
+        transform: translateY(0); 
+      }
+      50% {
+        transform: translateY(10px); 
+      }
+      100% {
+        transform: translateY(0); 
+      }
+    }
   .buttons__container {
     display: flex;
     justify-content: center;
@@ -88,6 +139,15 @@ import Roadmap from "../components/Roadmap.astro";
     }
     body {
       width: 100%;
+    
     }
   }
+
+
 </style>
+
+
+
+
+  
+  
