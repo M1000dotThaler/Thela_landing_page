@@ -1,34 +1,33 @@
 ---
 import Button from "../components/Button.astro";
 import GithubIcon from "../components/icons/Github__icon.astro";
+import DiscordIcon from "../components/icons/Discord__icon.astro";
 import Layout from "../layouts/Layout.astro";
 import Roadmap from "../components/Roadmap.astro";
+import SplitImage from "../components/SplitImage.astro";
 ---
 
 <Layout title="Thela Network">
   <header>
     <h1>Thela is <span>Network</span></h1>
 
-	<script>
-		//list of txt
-		const textos = ['A NETWORK', 'A LAYER 1', 'A COMMUNITY'];
-		let index = 0;
-		
-		
-		function changetext() {
-		  const element = document.querySelector('h1 span');
-		  if (element instanceof HTMLElement) { 
-			element.innerText = textos[index];
-			index = (index + 1) % textos.length;
-			setTimeout(changetext, 3500);
-		  }
-		}
-		
-		
-		changetext();
-	  </script>
-	  
-	  
+    <script>
+      //list of txt
+      const textos = ["A NETWORK", "A LAYER 1", "A COMMUNITY"];
+      let index = 0;
+
+      function changetext() {
+        const element = document.querySelector("h1 span");
+        if (element instanceof HTMLElement) {
+          element.innerText = textos[index];
+          index = (index + 1) % textos.length;
+          setTimeout(changetext, 3500);
+        }
+      }
+
+      changetext();
+    </script>
+
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quod saepe
       eum neque velit laudantium. Sequi reprehenderit inventore pariatur iusto,
@@ -38,7 +37,7 @@ import Roadmap from "../components/Roadmap.astro";
     </p>
     <div class="buttons__container">
       <Button href="/">
-        <GithubIcon slot="icon-before" />
+        <DiscordIcon slot="icon-before" />
         Discord
       </Button>
       <Button href="/">
@@ -47,29 +46,20 @@ import Roadmap from "../components/Roadmap.astro";
       </Button>
     </div>
 
-    <div>
-
-
-
-
-
-
-    </div>
+    <div></div>
     <div class="logo-container">
-      <img src="/scroll.png" alt="Logo" class="logo">
+      <img src="/scroll.png" alt="Logo" class="logo" />
     </div>
-  
   </header>
 
-  
   <main>
-    <Roadmap></Roadmap>
+    <Roadmap />
+    <SplitImage />
   </main>
 
   <div class="logo-container">
-    <img src="/scroll.png" alt="Logo" class="logo">
+    <img src="/scroll.png" alt="Logo" class="logo" />
   </div>
-
 </Layout>
 
 <style>
@@ -86,31 +76,31 @@ import Roadmap from "../components/Roadmap.astro";
   }
 
   .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 
   .logo {
-     padding-top: 30px;
-      width: 40px; 
-      height: auto; 
-      margin-left: 1px;
-      animation: moveUpDown 3s ease-in-out infinite;
-      filter: blur(0.5px);
+    padding-top: 30px;
+    width: 40px;
+    height: auto;
+    margin-left: 1px;
+    animation: moveUpDown 3s ease-in-out infinite;
+    filter: blur(0.5px);
+  }
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
     }
-    @keyframes moveUpDown {
-      0% {
-        transform: translateY(0); 
-      }
-      50% {
-        transform: translateY(10px); 
-      }
-      100% {
-        transform: translateY(0); 
-      }
+    50% {
+      transform: translateY(10px);
     }
+    100% {
+      transform: translateY(0);
+    }
+  }
   .buttons__container {
     display: flex;
     justify-content: center;
@@ -139,15 +129,6 @@ import Roadmap from "../components/Roadmap.astro";
     }
     body {
       width: 100%;
-    
     }
   }
-
-
 </style>
-
-
-
-
-  
-  
