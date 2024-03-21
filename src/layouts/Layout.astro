@@ -1,5 +1,4 @@
 ---
-import { SEO } from "astro-seo";
 import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
@@ -11,38 +10,10 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <SEO
-      title="Thela"
-      description="Thela  folllow the initial philosofy of the creation of Bitcoin by Satoshi Nakamoto. So yeah, we are Cryptocurrency maded by the community for the community, 
-      a small supply is made that will be distributed among the contributors in this project. "
-      openGraph={{
-        basic: {
-          title: "Thela Blockchain",
-          type: "Blockchain",
-          image:
-            "../../public/icon.png",
-        },
-      }}
-      twitter={{
-        creator: "@thela",
-      }}
-      extend={{
-        // extending the default link tags
-        link: [{ rel: "icon", href: "../../public/icon.png" }],
-        // extending the default meta tags
-        meta: [
-          {
-            name: "twitter:image",
-            content:
-              "../../public/icon.png",
-          },
-          { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-          { name: "twitter:description", content: "Agent" },
-        ],
-      }}
-    />
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content=" We are Cryptocurrency maded by the community for the community, 
+    a small supply is made, 0% transacion fees system implemented and easy mining algorithm which democratizes mining for all types of CPUs and with a low energy cost 
+    to preserve the environment." />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/icon.png" />
     <meta name="generator" content={Astro.generator} />
